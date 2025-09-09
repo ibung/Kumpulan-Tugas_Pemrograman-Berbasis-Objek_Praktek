@@ -1,18 +1,94 @@
-## Getting Started
+# E-commerce Java Application
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+Aplikasi e-commerce sederhana yang dibangun dengan Java untuk pembelajaran Object-Oriented Programming.
 
-## Folder Structure
+## 📋 System Requirements
 
-The workspace contains two folders by default, where:
+- Java 17 atau lebih tinggi
+- RAM minimum 512MB
+- Disk space 50MB
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+## 🚀 Cara Menjalankan
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+### Compile dan Run
+```bash
+# 1. Pindah ke root project
+cd e-commerce
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+# 2. Compile semua file
+javac -d bin src/App.java src/id/ac/polban/ecommerce/model/*.java src/id/ac/polban/ecommerce/service/*.java
 
-## Dependency Management
+# 3. Jalankan aplikasi
+java -cp bin App
+```
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+### Menggunakan JAR (jika tersedia)
+```bash
+java -jar lib/ecommerce.jar
+```
+
+## 🛍️ Fitur Utama
+
+- Input data pelanggan
+- Browse katalog produk
+- Tambah produk ke keranjang
+- Validasi stok otomatis
+- Checkout dan generate invoice
+- Tampilan yang user-friendly
+
+## 📁 Struktur Project
+
+```
+e-commerce/
+├── src/
+│   ├── App.java                                    # Main application
+│   └── id/ac/polban/ecommerce/
+│       ├── model/
+│       │   ├── Cart.java                          # Shopping cart
+│       │   ├── Customer.java                      # Customer data
+│       │   ├── Order.java                         # Order processing
+│       │   └── Product.java                       # Product model
+│       └── service/
+│           └── ECommerceService.java              # Business logic
+├── bin/                                           # Compiled classes
+├── lib/                                           # JAR files
+├── ProjectBaru/                                   # Tugas
+├── .vscode/                                          
+└── README.md
+```
+
+## 💡 Cara Menggunakan
+
+1. **Jalankan aplikasi** dengan perintah di atas
+2. **Masukkan data pelanggan** (nama, email, alamat, no HP)
+3. **Pilih produk** dari katalog yang tersedia
+4. **Tentukan jumlah** produk yang ingin dibeli
+5. **Lanjut berbelanja** atau checkout
+6. **Lihat invoice** pembelian lengkap
+
+## 🔧 Troubleshooting
+
+### Error: Could not find or load main class
+**Solusi:** Pastikan menjalankan `java App` dari direktori yang benar dan sudah compile semua file.
+
+### Error: Versi Java tidak kompatibel
+**Solusi:** Update Java ke versi 17+ atau compile ulang dengan versi Java yang sama.
+
+### Error: File tidak ditemukan
+**Solusi:** Pastikan struktur folder sesuai dan jalankan dari root project.
+
+## 🎓 Learning Objectives
+
+- Implementasi konsep OOP (Class, Object, Encapsulation)
+- Relasi antar kelas (Dependency, Aggregation, Composition)
+- Package management dan struktur project
+- Input validation dan error handling
+- Business logic dalam aplikasi nyata
+
+## 👨‍💻 Author
+
+Dibuat untuk pembelajaran mata kuliah Pemrograman Berorientasi Objek - Politeknik Negeri Bandung
+
+## 📄 License
+
+Project ini dibuat untuk keperluan edukasi.
