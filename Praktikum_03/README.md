@@ -52,6 +52,8 @@ e-commerce/
 │           └── ECommerceService.java              # Business logic
 ├── bin/                                           # Compiled classes
 ├── lib/                                           # JAR files
+├── ProjectBaru/                                   # Tugas
+├── .vscode/                                          
 └── README.md
 ```
 
